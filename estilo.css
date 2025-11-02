@@ -70,6 +70,8 @@ nav a {
     border-top: 1px solid #000000;
     padding-top:10px;
     text-align: justify;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .entrada{
     text-align: justify;
@@ -79,17 +81,31 @@ nav a {
     padding-left:10px;
     padding-right:10px;
     padding-top:20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .texto{
     display: flex;
-    align-items: center;
-    gap: 20px;
     flex:1; 
+    gap: 1rem;
+    align-items: flex-start;
+    box-sizing: border-box; 
 }
 .imagen-articulo{
-    width: 300px;
+    width: 300px;   
+    flex: 0 0 300px;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .article {
+    flex-direction: column;
+  }
+  .imagen-articulo {
+    width: 100%;
+    flex: 0 0 auto;
+  }
 }
 aside{
     float:right;
@@ -99,6 +115,8 @@ aside{
     padding:  10px;
     padding-left: 10px solid #000000;
     color: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 footer{
     background: #000000;
@@ -125,3 +143,4 @@ footer{
     border-radius: 3px;
     cursor: pointer;
 }
+
